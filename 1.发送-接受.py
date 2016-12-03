@@ -9,7 +9,6 @@ import serial
 port = '/dev/ttyUSB0'
 ser = serial.Serial(port, 9600, timeout=0.1)  # timeout扫描串口间隔时间，
 print(ser)
-
 print(ser.portstr)	# 串口名称
 
 # 打开串口
