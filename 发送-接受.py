@@ -5,7 +5,9 @@ import serial
 # 在linux下串口是字符串 /dev/ttyACM0
 # ser = serial.Serial('/dev/ttyACM0', 9600)  # 没有timeout, 一直保持连接
 # ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)  # timeout扫描串口间隔时间，超过时间没有返回数据，自动断开
-ser = serial.Serial('/dev/ttyACM0', 9600, timeout=0.1)  # timeout扫描串口间隔时间，
+
+port = '/dev/ttyUSB0'
+ser = serial.Serial(port, 9600, timeout=0.1)  # timeout扫描串口间隔时间，
 print(ser)
 
 print(ser.portstr)	# 串口名称
