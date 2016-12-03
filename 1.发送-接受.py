@@ -8,7 +8,7 @@ import serial
 
 port = '/dev/ttyUSB0'
 ser = serial.Serial(port, 9600, timeout=0.1)  # timeout扫描串口间隔时间，
-print(ser)
+print(ser)		# 串口所有信息
 print(ser.portstr)	# 串口名称
 
 # 打开串口
@@ -64,7 +64,7 @@ while 1:
 		
 		
 		# 读取任意数据
-		print("buffer:",ser.inWaiting())  # 缓冲区字节数
+		print("buffer:", ser.inWaiting())  # 缓冲区字节数
 		n = ser.inWaiting()
 		if(n==0):
 			break
